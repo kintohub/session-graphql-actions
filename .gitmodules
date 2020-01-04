@@ -1,0 +1,4 @@
+[submodule "dependencies/hasura-template"]
+	path = dependencies/hasura-template
+	url = https://github.com/kintohub/hasura-template
+	branch = master
