@@ -1,2 +1,3 @@
-# session-graphql-actions
-First and must have graphql actions block
+# Session Graphql Actions
+
+Basic JWT Session Management
