@@ -16,7 +16,7 @@ services:
   graphql-engine:
     volumes:
       - ./hasura/migrations:/hasura-migrations
-    image: hasura/graphql-engine:pull3252-a62cd26c
+    image: hasura/graphql-engine:pull3252-01f7c864
     ports:
       - "8080:8080"
     depends_on:
@@ -27,5 +27,6 @@ services:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:@postgres:5432/postgres
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
       HASURA_GRAPHQL_ADMIN_SECRET: abcd1234
+      SESSION_SERVICE_HOST: docker.for.mac.localhost:3000
 volumes:
   db_data:

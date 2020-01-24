@@ -1,0 +1,30 @@
+- args:
+    enums: []
+    input_objects: []
+    objects:
+    - description: null
+      fields:
+      - description: null
+        name: accessToken
+        type: String
+      name: CreateSessionResponse
+      relationships: null
+    scalars: []
+  type: set_custom_types
+- args:
+    definition:
+      arguments:
+      - description: null
+        name: expiresAt
+        type: String
+      - description: null
+        name: ownerId
+        type: String
+      - description: null
+        name: defaultRole
+        type: String
+      handler: http://{{SESSION_SERVICE_HOST}}/createSession
+      kind: synchronous
+      output_type: CreateSessionResponse
+    name: createSession
+  type: update_action
