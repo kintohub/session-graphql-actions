@@ -1,3 +1,0 @@
-- args:
-    sql: ALTER TABLE "public"."sessions" ADD COLUMN "claims" jsonb NULL;
-  type: run_sql

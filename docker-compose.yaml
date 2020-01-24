@@ -5,6 +5,14 @@ services:
     restart: always
     volumes:
       - db_data:/var/lib/postgresql/data
+  graphql-engine-migrations:
+    build: ./hasura-migrations
+    restart: on-failure
+    environment:
+      HASURA_GRAPHQL_ADMIN_SECRET: abcd1234
+      HASURA_GRAPHQL_HOST: http://graphql-engine:8080
+    depends_on:
+      - "graphql-engine"
   graphql-engine:
     volumes:
       - ./hasura/migrations:/hasura-migrations

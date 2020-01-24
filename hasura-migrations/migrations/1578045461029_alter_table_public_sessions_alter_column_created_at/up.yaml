@@ -1,0 +1,20 @@
+- args:
+    sql: ALTER TABLE "public"."sessions" ALTER COLUMN "created_at" TYPE timestamptz;
+  type: run_sql
+- args:
+    custom_column_names:
+      created_at: createdAt
+      expires_at: expiresAt
+      owner_id: ownerId
+    custom_root_fields:
+      delete: null
+      insert: null
+      select: null
+      select_aggregate: null
+      select_by_pk: null
+      update: null
+    table:
+      name: sessions
+      schema: public
+  type: set_table_custom_fields
+  version: 2

@@ -1,3 +1,0 @@
-- args:
-    sql: ALTER TABLE "public"."sessions" DROP COLUMN "claims";
-  type: run_sql
