@@ -44,14 +44,14 @@ func (i ActionInput) Validate() error {
 
 type Claims struct {
 	jwt.StandardClaims
-	Hasura HasuraClaims `json:"hasuraClient"`
+	Hasura HasuraClaims `json:"https://hasura.io/jwt/claims"`
 }
 
 type HasuraClaims struct {
-	AllowedRoles []string `json:"x-hasuraClient-allowed-roles"`
-	DefaultRole  string   `json:"x-hasuraClient-default-role"`
-	SessionId    string   `json:"x-hasuraClient-session-id"`
-	OwnerId      string   `json:"x-hasuraClient-owner-id"`
+	AllowedRoles []string `json:"x-hasura-allowed-roles"`
+	DefaultRole  string   `json:"x-hasura-default-role"`
+	SessionId    string   `json:"x-hasura-session-id"`
+	OwnerId      string   `json:"x-hasura-owner-id"`
 }
 
 type InsertSessionResponse struct {
